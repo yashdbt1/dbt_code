@@ -1,21 +1,12 @@
-
 version: 2
+sources:
+  - name: datafeed_shared
+    database: "{{('DB_DBT')}}"
+    schema: SOURCE_LAYER
 
-models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+    tables:
+      - name: customer_data
+      - name: orders_data
+      - name: product_data
+      - name: STG_EMPL
+      - name: model_orders
