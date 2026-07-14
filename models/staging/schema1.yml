@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: datafeed_shared_schema
+    database: "{{('DB_DBT')}}"
+    schema: SOURCE_LAYER
+
+    tables:
+      - name: customer_data
+      - name: orders_data
+      - name: product_data
+      - name: STG_EMPL
+      - name: model_orders
