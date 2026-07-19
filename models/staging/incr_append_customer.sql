@@ -1,5 +1,5 @@
 {{ config(materialized='incremental',
-   incremental_strategy='append',
+   incremental_strategy='append'
   )
 }}
 
@@ -10,4 +10,6 @@ where id>
 (select max(id)
 from {{ this }}
 )
-{% endif %}
+{% endif %};
+
+
